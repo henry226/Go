@@ -1,12 +1,12 @@
 # go_crash_course
-###Hello Word: 
+### Hello Word: 
 ```go
 Hello World
 ```
 
 ---
 
-###Variables:  
+### Variables:  
 string  
 bool  
 int int8 int16 int32 int64  
