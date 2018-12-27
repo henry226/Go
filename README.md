@@ -1,12 +1,12 @@
 # Golang
-### Hello Word: 
+### Hello Word   
 ```go
 Hello World
 ```
 
 ---
 
-### Variables:  
+### Variables  
 string  
 bool  
 int, int8, int16, int32, int64  
@@ -22,7 +22,15 @@ float64
 
 ---  
 
-### Packages:  
+### Packages  
+Import:
+```go
+"fmt"
+"math"
+
+"github.com/henry226/go_crash_course/03_packages/strutil" (self made package)
+``` 
+Output:
 ```go
 math.Floor(2.7) =  2
 math.Ceil(2.7) =  3
