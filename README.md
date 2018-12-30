@@ -1,4 +1,4 @@
-# Golang
+# Golang Programming Language
 ### Hello Word  
 Output:   
 ```go
@@ -42,3 +42,23 @@ Reverse 'hello' =  olleh
 ```
 
 ---
+
+### Function
+Functions:
+```go
+func greeting(name string) string {
+	return "Hello " + "name"
+}
+
+func getSum(num1, num2 int) int {
+	return num1 + num2
+}
+```
+Output:
+```go
+greeting('Mary') = Hello name
+getSum(10,11) =  21 
+```
+
+---
+
