@@ -62,3 +62,29 @@ getSum(10,11) =  21
 
 ---
 
+### Arrays_Slices
+Array and Slice:
+```go
+// Arrays
+var fruitArr [2]string
+
+// Assign values
+fruitArr[0] = "Banana"
+fruitArr[1] = "Mango"  
+
+// Declare and assign
+carArr := [2]string{"Honda", "Toyota"}  
+
+// slice (array with dynamic size)
+foodSlice := []string{"Sushi", "Noodle", "Steak", "Burger"}
+```
+Output:
+```go
+fruitArr:  [Banana Mango]
+fruitArr[0]:  Banana
+carArr:  [Honda Toyota]
+carArr[0]:  Honda
+foodSlice:  [Sushi Noodle Steak Burger]
+len(foodSlice):  4
+foodSlice[1:3] [Noodle Steak]
+```
