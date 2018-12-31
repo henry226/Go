@@ -88,3 +88,33 @@ foodSlice:  [Sushi Noodle Steak Burger]
 len(foodSlice):  4
 foodSlice[1:3] [Noodle Steak]
 ```
+
+---
+
+### Conditionals
+If-else condition:
+```go
+if x < y {
+	fmt.Printf("%d is less than %d\n", x, y)
+} else if x == y {
+	fmt.Printf("%d is equal to %d\n", x, y)
+} else {
+	fmt.Printf("%d is greater than %d\n", x, y)
+}
+```
+Switch Statement:
+```go
+switch color {
+case "red":
+	fmt.Println("color is red")
+case "blue":
+	fmt.Println("color is blue")
+default:
+	fmt.Println("color is not blue nor red")
+}
+```
+Output:
+```go
+25 is equal to 25
+color is not blue nor red
+```
