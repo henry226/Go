@@ -204,7 +204,7 @@ delete(emails, "Dick")
 ```
 Map length: 
 ```go 
-len(emails)
+fmt.Println("Total", len(emails), "email(s)")
 ```
 Output: 
 ```go
