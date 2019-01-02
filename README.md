@@ -18,7 +18,6 @@ rune -alias for int32
 float32, float64  
 complex64, complex128  
 ```
-<br>
 Output:  
 ```go
 Henry duck 37 false 1.3 Zion Zion@gmail.com
