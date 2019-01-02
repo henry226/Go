@@ -219,7 +219,7 @@ Student's map: map[2:Anita 3:Andy 1:Mary]
 ---
 
 ### Range
-Declare slice` and map:
+Declare slice and map:
 ```go
 // Slice
 ids := []int{33, 76, 54, 23, 11, 22}
@@ -252,7 +252,7 @@ for key, value := range students {
 	fmt.Printf("%d : %s\n", key, value)
 }
 ```
-Range with map without value
+Range with map without value:
 ```go
 for key := range students {
 	fmt.Printf("Keys: %d\n", key)
