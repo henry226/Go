@@ -204,7 +204,7 @@ delete(emails, "Dick")
 ```
 Map length: 
 ```go 
-fmt.Println("Total", len(emails), "email(s)")
+len(emails)
 ```
 Output: 
 ```go
@@ -214,6 +214,71 @@ Peter's email: peter@email.com
 Delete Dick's email
 All emails: map[Peter:peter@email.com Emma:emma@email.com]
 Student's map: map[2:Anita 3:Andy 1:Mary]
+```
+
+---
+
+### Range
+Declare slice` and map:
+```go
+// Slice
+ids := []int{33, 76, 54, 23, 11, 22}
+// Map
+students := map[int]string{1: "Mary", 2: "Anita", 3: "Andy"}
+```
+Loop through slice:
+```go
+for i, id := range ids {
+	fmt.Printf("%d - ID: %d\n", i, id)
+}
+```
+Not using index:
+```go
+for _, id := range ids {
+	fmt.Printf("IDs: %d\n", id)
+}
+```
+Add all elements in slice:
+```go
+sum := 0
+for _, id := range ids {
+	sum += id
+}
+fmt.Println("Sum of all ids:", sum)
+```
+Range with map:
+```go
+for key, value := range students {
+	fmt.Printf("%d : %s\n", key, value)
+}
+```
+Range with map without value
+```go
+for key := range students {
+	fmt.Printf("Keys: %d\n", key)
+}
+```
+Output:
+```go
+0 - ID: 33
+1 - ID: 76
+2 - ID: 54
+3 - ID: 23
+4 - ID: 11
+5 - ID: 22
+IDs: 33
+IDs: 76
+IDs: 54
+IDs: 23
+IDs: 11
+IDs: 22
+Sum of all ids: 219
+1 : Mary
+2 : Anita
+3 : Andy
+Keys: 1
+Keys: 2
+Keys: 3
 ```
 
 ---
