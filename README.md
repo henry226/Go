@@ -174,3 +174,46 @@ Fizz 82 83 Fizz Buzz 86 Fizz 88 89 FizzBuzz
 ```
 
 ---
+
+### Maps  
+Declare Map:
+```go
+// Define map
+emails := make(map[string]string)
+
+// Declare map and add key value
+students := map[int]string{1: "Mary", 2: "Anita", 3: "Andy"}
+```
+Assign key value:
+```go
+// Assign Key Value
+emails["Peter"] = "peter@email.com"
+emails["Dick"] = "dick@email.com"
+emails["Emma"] = "emma@email.com"
+
+// Declare map and add key value
+students := map[int]string{1: "Mary", 2: "Anita", 3: "Andy"}
+```
+Output key's value:
+```go
+fmt.Println("Peter's email:", emails["Peter"])
+```
+Delete key:
+```go
+delete(emails, "Dick")
+```
+Map length: 
+```go 
+len(emails)
+```
+Output: 
+```go
+All emails: map[Peter:peter@email.com Dick:dick@email.com Emma:emma@email.com]
+Total 3 email(s)
+Peter's email: peter@email.com
+Delete Dick's email
+All emails: map[Peter:peter@email.com Emma:emma@email.com]
+Student's map: map[2:Anita 3:Andy 1:Mary]
+```
+
+---
