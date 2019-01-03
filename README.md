@@ -481,7 +481,7 @@ Rectangle Area: 60.00
 
 ---
 
-### Web
+## Web
 Functions for website content:
 ```go
 func index(w http.ResponseWriter, r *http.Request) {
