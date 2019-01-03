@@ -344,4 +344,91 @@ Output:
 36
 45
 ```
+
 ---
+
+### Structs
+Define Person struct: 
+```go
+type Person struct {
+	firstName string
+	lastName  string
+	city      string
+	gender    string
+	age       int
+
+	// Short cut
+	// firstName, lastName, city, gender string
+	// age int
+}
+```
+Value reciever method
+```go
+func (person Person) greet() string {
+	return "Hello, my name is " + person.firstName + " " + person.lastName + " and I am " + strconv.Itoa(person.age) + " years old."
+}
+```
+Pointer reciever method
+```go
+func (person *Person) hasBirthday() {
+	fmt.Println("+1 age (called person1.hasBirthday())")
+	person.age++
+}
+
+func (person *Person) getMarried(spouseLastName string) {
+	fmt.Println(person.firstName, person.lastName, "is married to", spouseLastName)
+
+	if person.gender == "m" {
+		return
+	} else {
+		person.lastName = spouseLastName
+	}
+}
+```
+Init person using struct: 
+```go 
+person1 := Person{firstName: "Mary", lastName: "Wong", city: "Washington", gender: "f", age: 30}
+person2 := Person{"Peter", "Chang", "Franklin", "m", 44}
+```
+Print and modify person info:
+```go
+// Output Person
+fmt.Println("person1:", person1, "\nperson2:", person2)
+fmt.Println("person1 firstname:", person1.firstName)
+
+// Change person info
+person1.age = person1.age + 10
+fmt.Println("person1:", person1, "(age modified)")
+
+// Output greeting method (value reciever)
+fmt.Println(person1.greet())
+
+// Output hasBirthday method (pointer reciever)
+person1.hasBirthday()
+person1.hasBirthday()
+fmt.Println(person1.greet())
+
+// Output getMarried method (pointer reciever)
+person1.getMarried("John Li")
+fmt.Println(person1.greet())
+person2.getMarried("Yal Chen")
+fmt.Println(person2.greet(), "(last name no change because Peter is male.)")
+```
+Output: 
+```go
+person1: {Mary Wong Washington f 30}
+person2: {Peter Chang Franklin m 44}
+person1 firstname: Mary
+person1: {Mary Wong Washington f 40} (age modified)
+Hello, my name is Mary Wong and I am 40 years old.
++1 age (called person1.hasBirthday())
++1 age (called person1.hasBirthday())
+Hello, my name is Mary Wong and I am 42 years old.
+Mary Wong is married to John Li
+Hello, my name is Mary John Li and I am 42 years old.
+Peter Chang is married to Yal Chen
+Hello, my name is Peter Chang and I am 44 years old. (last name no change because Peter is male.)
+```
+
+---
+
