@@ -311,3 +311,26 @@ a = int, b = *int
 *&a = 5 *b = 5
 a =  10
 ```
+
+---
+
+### Closures
+Function with anonymous functions:
+```go
+func adder() func(int) int {
+	sum := 0
+	return func(x int) int {
+		sum += x
+		return sum
+	}
+}
+```
+Main:
+```go
+sum := adder()
+for i := 0; i < 10; i++ {
+	fmt.Println(sum(i))
+}
+```
+
+---
