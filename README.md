@@ -432,3 +432,51 @@ Hello, my name is Peter Chang and I am 44 years old. (last name no change becaus
 
 ---
 
+### Interfaces
+Define interface:
+```go
+type Shape interface {
+	area() float64
+}
+```
+Define structs:
+```go
+type Circle struct {
+	x, y, radius float64
+}
+
+type Rectangle struct {
+	width, height float64
+}
+```
+Define methods:
+```go
+func (circle Circle) area() float64 {
+	return math.Pi * circle.radius * circle.radius
+}
+
+func (rect Rectangle) area() float64 {
+	return rect.width * rect.height
+}
+
+func getArea(shape Shape) float64 {
+	return shape.area()
+}
+```
+Init circle and rectangle structs:
+```go 
+circle := Circle{x: 0, y: 0, radius: 5}
+rect := Rectangle{width: 12, height: 5}
+```
+Print areas:
+```go
+fmt.Printf("Circle Area: %.2f\n", getArea(circle))
+fmt.Printf("Rectangle Area: %.2f\n", getArea(rect))
+```
+Output:
+```go
+Circle Area: 78.54
+Rectangle Area: 60.00
+```
+
+---
