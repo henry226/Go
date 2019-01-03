@@ -1,5 +1,5 @@
 # Golang Programming Language
-### Hello Word  
+## Hello Word  
 Output:   
 ```go
 Hello World
@@ -7,7 +7,7 @@ Hello World
 
 ---
 
-### Variables  
+## Variables  
 ```go
 string  
 bool  
@@ -26,7 +26,7 @@ float64
 
 ---  
 
-### Packages  
+## Packages  
 Import:
 ```go
 "fmt"
@@ -44,7 +44,7 @@ Reverse 'hello' =  olleh
 
 ---
 
-### Function
+## Function
 Functions:
 ```go
 func greeting(name string) string {
@@ -63,7 +63,7 @@ getSum(10,11) =  21
 
 ---
 
-### Arrays_Slices
+## Arrays_Slices
 Array and Slice:
 ```go
 // Arrays
@@ -92,7 +92,7 @@ foodSlice[1:3] [Noodle Steak]
 
 ---
 
-### Conditionals
+## Conditionals
 If-else condition:
 ```go
 if x < y {
@@ -122,7 +122,7 @@ color is not blue nor red
 
 --- 
 
-### Loops
+## Loops
 Long method:
 ```go
 i := 1
@@ -176,7 +176,7 @@ Fizz 82 83 Fizz Buzz 86 Fizz 88 89 FizzBuzz
 
 ---
 
-### Maps  
+## Maps  
 Declare Map:
 ```go
 // Define map
@@ -219,7 +219,7 @@ Student's map: map[2:Anita 3:Andy 1:Mary]
 
 ---
 
-### Range
+## Range
 Declare slice and map:
 ```go
 // Slice
@@ -284,7 +284,7 @@ Keys: 3
 
 ---
 
-### Pointers
+## Pointers
 Declare variables:
 ```go
 a := 5
@@ -314,7 +314,7 @@ a =  10
 
 ---
 
-### Closures
+## Closures
 Function with anonymous functions:
 ```go
 func adder() func(int) int {
@@ -347,7 +347,7 @@ Output:
 
 ---
 
-### Structs
+## Structs
 Define Person struct: 
 ```go
 type Person struct {
