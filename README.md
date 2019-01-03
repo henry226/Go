@@ -480,3 +480,26 @@ Rectangle Area: 60.00
 ```
 
 ---
+
+### Web
+Functions for website content:
+```go
+func index(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "<h1>Index Page</h1>")
+}
+
+func about(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "<h1>About Page</h1>")
+}
+```
+Connect to localhost:
+```go
+http.HandleFunc("/", index)
+http.HandleFunc("/about", about)
+fmt.Println("Server Starting... localhost:3000")
+http.ListenAndServe(":3000", nil)
+```
+Output:
+```go
+Server Starting... localhost:3000
+```
