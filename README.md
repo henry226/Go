@@ -508,11 +508,11 @@ Server Starting... localhost:3000
 ## Connected to MySQL
 Connection:
 ```go
-db, err := sql.Open("mysql", "root:@tcp(127.0.0.1:3306)/test")
+db, err := sql.Open("mysql", "root:password@tcp(127.0.0.1:3306)/dbname")
 ```
 Insert query: 
 ```go
-insert, err := db.Query("INSERT INTO test VALUES ( 2, 'TEST' )")
+insert, err := db.Query("INSERT INTO dbname VALUES ( yourQuery )")
 ```
 Output:
 ```go
