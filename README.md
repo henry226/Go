@@ -502,3 +502,21 @@ Output:
 ```go
 Server Starting... localhost:3000
 ```
+
+---
+
+## Connected to MySQL
+Connection:
+```go
+db, err := sql.Open("mysql", "root:@tcp(127.0.0.1:3306)/test")
+```
+Insert query: 
+```go
+insert, err := db.Query("INSERT INTO test VALUES ( 2, 'TEST' )")
+```
+Output:
+```go
+Successfully connected to DB
+Successfully Insert to DB
+```
+
